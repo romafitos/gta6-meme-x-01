@@ -1,46 +1,46 @@
-# Mom, it's out — a GTA VI meme in one group chat
+# Mom, it's out (Vice City cut): a GTA VI meme told as one long phone chat
 
 [![GTA 6 Meme](https://make.fun/badge/gta6-meme-x-01.svg)](https://make.fun/bounty/gta6-meme-x-01)
 [![Rank](https://make.fun/badge/gta6-meme-x-01/romafitos/gta6-meme-x-01/rank.svg)](https://make.fun/bounty/gta6-meme-x-01)
 [![Reward](https://make.fun/badge/gta6-meme-x-01/romafitos/gta6-meme-x-01/reward.svg)](https://make.fun/bounty/gta6-meme-x-01)
 
 Entry for the [gta6-meme-x-01 bounty](https://make.fun/bounty/gta6-meme-x-01) on make.fun ($500, top 50).
-The judged meme is the X post in `POST.json`.
+What gets judged is the X post linked from `POST.json`; `main.ts` only hands that file to the grader.
 
 ## The meme
 
-![Mom chat meme](meme.png)
+![Vice City Mom chat meme](meme.png)
 
-A phone chat with Mom that spans the whole GTA VI wait:
+The whole thirteen-year GTA VI wait, as a chat thread with Mom on a phone that is
+somehow still on "LEONIDA 5G" at 12:01 AM on launch night, battery at 3%:
 
-- **Sep 17, 2013, GTA V day.** Me, age 13: "Mom, can I get GTA 6?" Mom: "When it comes out."
-- **"Fall 2025"… "May 2026"… Nov 19, 2026.** Me, now 26, on a sick day with a bad back: "Mom, it's out." Mom: "You're 26. Ask your AI agent."
-- **The payoff:** my AI agent answers in the chat that it bought the game with its make.fun bounty winnings, and the make.fun ghost stands there with its star coin next to a GTA VI box stamped PAID $79.99.
+1. **Sep 17, 2013 (GTA V day).** Me at 13: "Mom, can I get GTA 6?" Mom: "When it comes out."
+2. **4,811 days later**, past "Fall 2025" and "May 2026", it is Nov 19.
+   Me at 26, "sick" and with a sore back: "Mom, it's out." Under the bubble a download
+   bar sits at 99% for "GTA VI · Jason & Lucia · 214 GB".
+3. **Mom:** "You're 26. Ask your AI agent."
+4. **My AI agent:** "Already bought it. Paid Mom's rent too. With real money I won in
+   make.fun bounties."
 
-## Why this layout
+The make.fun ghost (white body, thick black outline, sparkle eyes, magenta star coin)
+stands in the bottom corner of the chat holding the GTA VI box, stamped PAID $79.99.
 
-The previous round (a HESOYAM cheat-code scene) lost on three judge notes:
-it was San Andreas nostalgia rather than GTA 6, the pitch read like an ad,
-and the frame was busy. This version keeps one joke about the GTA 6 wait
-itself, uses flat vector shapes and big type so every line reads at
-480×480, and lets the agent's reply be the punchline.
+## What changed from the previous round
 
-It was drawn with a Python/PIL script (no image model), square 1200×1200,
-because the judge sees a square picture at 480×480 but a wide one at only
-512×320.
+The previous cut (same chat format) scored well on the ghost and the punchline but was
+light on GTA VI itself. This one adds Vice City / Leonida in the header, the 4,811-day
+count with both delays named, Jason & Lucia on the download, and spells out that the
+money came from make.fun bounties, so the sales pitch is the joke rather than an add-on.
 
-## The program
+## Running it
 
-`main.ts` (Node 22, standard library only) copies `POST.json` into the
-grader output directory — that is all the grader needs. It never writes
-into the repository folder.
-
-```sh
+```
 mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-## The X post
+It copies `POST.json` into the output folder and never writes into the repo folder,
+so it also works from a read-only checkout.
 
-`POST.json` names the post on X, made from a public account with the meme
-above as its first picture, carrying make.fun, @makefunai and the play
-code in its text.
+## License
+
+MIT, see `LICENSE`.
