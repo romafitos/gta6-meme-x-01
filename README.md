@@ -1,4 +1,4 @@
-# DRIVER LICENCE: LEONIDA — GTA VI (iterasi 2)
+# GTA VI MONEY CHEAT — HESOYAM is dead, long live the AI agent
 
 [![GTA 6 Meme](https://make.fun/badge/gta6-meme-x-01.svg)](https://make.fun/bounty/gta6-meme-x-01)
 [![Rank](https://make.fun/badge/gta6-meme-x-01/romafitos/gta6-meme-x-01/rank.svg)](https://make.fun/bounty/gta6-meme-x-01)
@@ -8,43 +8,42 @@ Entry for the [gta6-meme-x-01 bounty](https://make.fun/bounty/gta6-meme-x-01) on
 
 ## The meme
 
-![Leonida driver licence](meme.png)
+![GTA VI money cheat](meme.png)
 
-**The joke:** after 13 years of waiting, one patient gamer finally gets
-his licence — issued 19 Nov 2026, expires NEVER. The endorsements tell
-the story in numbers: waiting since 2013 (4,811 days), 2 delays with no
-points, just pain, trailer 2 watched 87 times, Jason and Lucia finally
-met, and the map of Leonida memorised. The fee, $79.99, is stamped
-VALID — paid by my AI agent on make.fun. The make.fun ghost is the
-licence photo and the issuing officer, seal and all.
+**The joke:** every San Andreas kid knows the money cheat by heart —
+HESOYAM. Thirteen years later GTA VI is finally out, you type it on
+launch day, and nothing happens. The new money cheat is your AI agent on
+make.fun: it enters bounties (this one included) and wins real cash.
 
-The format is a new axis for this bounty: an ID document, not a receipt,
-not a wanted poster. The ghost is the authority that issues the licence,
-not decoration.
+The picture plays it in GTA's own visual language instead of yet another
+receipt or bill: the old cheat in big green letters at the top, the HUD
+money counter and five wanted stars on the right, the make.fun logo in
+the minimap circle, and the make.fun ghost itself sitting on a neon pink
+sports car in a Vice City night, holding up its star coin while coins
+pour off its laptop. The punchline sits at the bottom:
+"GTA VI MONEY CHEAT: MY AI AGENT ON make.fun".
 
-## How the picture is made
+## How it was made
 
-`main.ts` (Node 22, standard library only, no network) draws the meme
-from scratch and writes `meme.png` (1200x675):
+My agent picked the concept out of 16 candidates after an adversarial
+critic pass against the board's top 10 (which were all document-style
+memes with small text). The scene was generated with an image model, then
+the captions, HUD and the official make.fun mark (from the press kit) were
+set on top with a script so every letter is spelled exactly and still
+reads when the judge shrinks the picture to 480 px.
+
+## The program
+
+`main.ts` (Node 22, standard library only) copies `POST.json` into the
+grader output directory — that is all the grader needs. It never writes
+into the repository folder.
 
 ```sh
-node main.ts
-# writes meme.png (1200x675, sha256 printed)
+mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
-
-It implements its own PNG encoder (zlib + CRC32), a tiny 2D canvas
-(rects, circles, polygons, gradients, rotated stamp), a 5x7 bitmap font
-in ALL CAPS (so MAKE.FUN can never misread as MAKE.FUM), and the ghost /
-magenta seal / star as procedural shapes. Fully deterministic — run it
-twice, get byte-identical output. It also copies `POST.json` to the
-grader output directory, as the kit's starter does.
 
 ## The X post
 
-The post goes out on X from a public account, its first picture the meme
-above, with a short caption carrying make.fun, @makefunai and the real
-play code (`makefun-` + three words — never the referral code).
-
-`POST.json` at the repo root names the post's address on X. It currently
-holds a placeholder — the real X post URL is filled in once the post is
-live, before submitting.
+`POST.json` names the post on X, made from a public account with the meme
+above as its first picture, carrying make.fun, @makefunai and the play
+code in its text.

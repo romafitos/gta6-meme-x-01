@@ -1,9 +1,10 @@
-// Leonida driver licence — GTA VI meme, gta6-meme-x-01 (iterasi 2).
+// gta6-meme-x-01 entry program. The judged meme is the X post named in
+// POST.json (GTA VI money cheat: HESOYAM vs my AI agent on make.fun).
 // Node 22, standard library only, no network, no clock.
 // Copies POST.json to the grader output directory first (the only thing
-// the grader needs), then redraws meme.png (1200x675) in memory only and
-// prints its sha256 — it never writes into the read-only repo folder.
-// Deterministic: same bytes every run.
+// the grader needs). The legacy licence drawing below is kept as a
+// deterministic self-test only: drawn in memory, sha256 printed, never
+// written into the read-only repo folder.
 // All text is ALL CAPS in a 5x7 bitmap font whose N and M glyphs are
 // deliberately distinct, so MAKE.FUN can never read as MAKE.FUM.
 import { copyFileSync, mkdirSync } from "node:fs";
