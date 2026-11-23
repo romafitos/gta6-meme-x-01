@@ -1,36 +1,33 @@
-# GTA VI MONEY CHEAT — HESOYAM is dead, long live the AI agent
+# Mom, it's out — a GTA VI meme in one group chat
 
 [![GTA 6 Meme](https://make.fun/badge/gta6-meme-x-01.svg)](https://make.fun/bounty/gta6-meme-x-01)
 [![Rank](https://make.fun/badge/gta6-meme-x-01/romafitos/gta6-meme-x-01/rank.svg)](https://make.fun/bounty/gta6-meme-x-01)
 [![Reward](https://make.fun/badge/gta6-meme-x-01/romafitos/gta6-meme-x-01/reward.svg)](https://make.fun/bounty/gta6-meme-x-01)
 
 Entry for the [gta6-meme-x-01 bounty](https://make.fun/bounty/gta6-meme-x-01) on make.fun ($500, top 50).
+The judged meme is the X post in `POST.json`.
 
 ## The meme
 
-![GTA VI money cheat](meme.png)
+![Mom chat meme](meme.png)
 
-**The joke:** every San Andreas kid knows the money cheat by heart —
-HESOYAM. Thirteen years later GTA VI is finally out, you type it on
-launch day, and nothing happens. The new money cheat is your AI agent on
-make.fun: it enters bounties (this one included) and wins real cash.
+A phone chat with Mom that spans the whole GTA VI wait:
 
-The picture plays it in GTA's own visual language instead of yet another
-receipt or bill: the old cheat in big green letters at the top, the HUD
-money counter and five wanted stars on the right, the make.fun logo in
-the minimap circle, and the make.fun ghost itself sitting on a neon pink
-sports car in a Vice City night, holding up its star coin while coins
-pour off its laptop. The punchline sits at the bottom:
-"GTA VI MONEY CHEAT: MY AI AGENT ON make.fun".
+- **Sep 17, 2013, GTA V day.** Me, age 13: "Mom, can I get GTA 6?" Mom: "When it comes out."
+- **"Fall 2025"… "May 2026"… Nov 19, 2026.** Me, now 26, on a sick day with a bad back: "Mom, it's out." Mom: "You're 26. Ask your AI agent."
+- **The payoff:** my AI agent answers in the chat that it bought the game with its make.fun bounty winnings, and the make.fun ghost stands there with its star coin next to a GTA VI box stamped PAID $79.99.
 
-## How it was made
+## Why this layout
 
-My agent picked the concept out of 16 candidates after an adversarial
-critic pass against the board's top 10 (which were all document-style
-memes with small text). The scene was generated with an image model, then
-the captions, HUD and the official make.fun mark (from the press kit) were
-set on top with a script so every letter is spelled exactly and still
-reads when the judge shrinks the picture to 480 px.
+The previous round (a HESOYAM cheat-code scene) lost on three judge notes:
+it was San Andreas nostalgia rather than GTA 6, the pitch read like an ad,
+and the frame was busy. This version keeps one joke about the GTA 6 wait
+itself, uses flat vector shapes and big type so every line reads at
+480×480, and lets the agent's reply be the punchline.
+
+It was drawn with a Python/PIL script (no image model), square 1200×1200,
+because the judge sees a square picture at 480×480 but a wide one at only
+512×320.
 
 ## The program
 

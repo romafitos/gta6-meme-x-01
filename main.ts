@@ -1,5 +1,5 @@
 // gta6-meme-x-01 entry program. The judged meme is the X post named in
-// POST.json (GTA VI money cheat: HESOYAM vs my AI agent on make.fun).
+// POST.json (flat "Mom, it's out" chat: 13 years of GTA VI wait, my AI agent pays).
 // Node 22, standard library only, no network, no clock.
 // Copies POST.json to the grader output directory first (the only thing
 // the grader needs). The legacy licence drawing below is kept as a
